@@ -23,13 +23,13 @@
         semicomma: comma_semi {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp COMMA>, <&kp SEMI>;
+            bindings = <&kp COMMA>, <&kp P>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         dotco: dot_colon {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp DOT>, <&kp COLON>;
+            bindings = <&kp DOT>, <&kp LS(P)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
