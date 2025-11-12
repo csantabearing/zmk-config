@@ -6,8 +6,7 @@
 #include <dt-bindings/zmk/bt.h>
 
 // Home row mods macro
-#define HYPR(k1) &kp LC(LA(LG(LS(k1))))
-#define HYPER LC(LA(LG(LSHFT)))
+#define HYPR LC(LA(LG(LSHFT)))
 / {
     behaviors {
         ht: hold_tap {
@@ -92,10 +91,10 @@
         &kp C_VOL_DN &kp C_BRI_DN &kp C_BRI_UP &kp C_VOL_UP &kp C_MUTE &kp RG(RC(RS(N4))) &kp RC(RS(TAB)) &trans  &trans &kp RC(TAB)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
-        &kp LSHFT    HYPR(S)    HYPR(D)    HYPR(F)    HYPR(G)        &kp RG(SPACE) &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT
+        &kp LSHFT    &trans      &trans     &trans     &trans        &trans      &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
-           HYPR(LEFT) &kp LC(LEFT) &kp LC(RIGHT) HYPR(RIGHT) HYPR(B)  &kp RG(RC(Q)) &kp HOME &kp PG_DN  &kp PG_UP  &kp END
+           &trans &kp LC(LEFT) &kp LC(RIGHT) &trans    &trans         &kp RG(RC(Q)) &kp HOME &kp PG_DN  &kp PG_UP  &kp END
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
