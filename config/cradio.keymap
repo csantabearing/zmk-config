@@ -20,9 +20,9 @@
         };
         hyper: hyper_mod {
             compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <1>;
+            #binding-cells = <0>;
             mods = <(MOD_LCTL | MOD_LALT | MOD_LSFT | MOD_LGUI)>;
-            bindings = <&kp>;
+            bindings = <>;
         };
         semicomma: comma_semi {
             compatible = "zmk,behavior-mod-morph";
