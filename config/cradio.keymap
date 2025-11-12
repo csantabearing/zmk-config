@@ -6,20 +6,9 @@
 #include <dt-bindings/zmk/bt.h>
 
 // Home row mods macro
-#define HRML(k1,k2,k3,k4) &ht LCTRL k1  &ht LALT k2 &ht LSHFT k3  &ht LGUI k4
-#define HRMR(k1,k2,k3,k4) &ht RGUI k1 &ht RSHFT k2  &ht RALT k3  &ht RCTRL k4
 #define HYPER(k1) &kp LC(LA(LG(LS(k1))))
 / {
     behaviors {
-        ht: hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <220>;
-            quick-tap-ms = <150>;
-            require-prior-idle-ms = <100>;
-            bindings = <&kp>, <&kp>;
-        };
         semicomma: comma_semi {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -31,6 +20,12 @@
             #binding-cells = <0>;
             bindings = <&kp DOT>, <&kp LS(P)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        qesc: q_esc {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp q>, <&kp ESC>;
         };
     };
 
@@ -49,15 +44,15 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  Q       │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │  P       │
-            &kp Q      &kp W      &kp E      &kp R      &kp T          &kp Y      &kp U      &kp I      &kp O      &kp BSPC
+            &qesc      &kp W      &kp E      &kp R      &kp T          &kp Y      &kp U      &kp I      &kp O      &kp BSPC
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │; "      │
-            HRML(A,        S,         D,         F)     &kp G          &kp H      HRMR(J,        K,         L,        SEMI)
+        //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │; "       │
+            &kp A      &kp S       &kp D    &mt LGUI F  &kp G          &kp H     &mt LGUI J  &kp  K     &kp  L     &kp SEMI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
-            &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &semicomma  &dotco    &kp FSLH
+        //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , ;      │ . :      │ / ?      │
+          &mt LCTRL Z &mt LALT X  &kp C      &kp V      &kp B          &kp N      &kp M      &semicomma  &dotco    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &kp TAB   &lt 1 SPACE     &lt 2 ENTER  &kp RSHFT
+                                           &mt LGUI TAB &lt 1 SPACE   &lt 2 ENTER  &kp RSHFT
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
