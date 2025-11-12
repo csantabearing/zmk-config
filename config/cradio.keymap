@@ -67,7 +67,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , ;      │ . :      │ / ?      │
           &ht LCTRL Z &ht LALT X  &kp C      &kp V      &kp B          &kp N      &kp M      &semicomma  &dotco    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                           &ht hyper TAB &lt 1 SPACE   &lt 2 ENTER &sk RSHFT
+                                           &ht &hyper TAB &lt 1 SPACE   &lt 2 ENTER &sk RSHFT
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
