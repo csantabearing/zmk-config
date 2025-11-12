@@ -61,7 +61,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , ;      │ . :      │ / ?      │
           &ht LCTRL Z &ht LALT X  &kp C      &kp V      &kp B          &kp N      &kp M      &semicomma  &dotco    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                           &ht HYPER TAB &lt 1 SPACE   &lt 2 ENTER &sk RSHFT
+                                           &ht HYPR TAB &lt 1 SPACE   &lt 2 ENTER &sk RSHFT
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -91,7 +91,7 @@
         &kp C_VOL_DN &kp C_BRI_DN &kp C_BRI_UP &kp C_VOL_UP &kp C_MUTE &kp RG(RC(RS(N4))) &kp RC(RS(TAB)) &trans  &trans &kp RC(TAB)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
-        &kp LSHFT    &trans      &trans     &trans     &trans        &trans      &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT
+        &kp LSHFT    &trans      &trans     &trans     &trans         &trans      &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
            &trans     &trans     &trans     &trans     &trans         &kp RG(RC(Q)) &kp HOME &kp PG_DN  &kp PG_UP  &kp END
