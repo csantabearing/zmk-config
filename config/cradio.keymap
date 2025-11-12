@@ -20,7 +20,20 @@
             require-prior-idle-ms = <100>;
             bindings = <&kp>, <&kp>;
         };
+        semicomma: comma_semi {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp P>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        dotco: dot_colon {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DOT>, <&kp LS(P)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
+
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
@@ -42,7 +55,7 @@
             HRML(A,        S,         D,         F)     &kp G          &kp H      HRMR(J,        K,         L,        SEMI)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
-            &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
+            &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &semicomma  &dotco    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                             &kp TAB   &lt 1 SPACE     &lt 2 ENTER  &kp RSHFT
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
