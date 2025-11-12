@@ -9,6 +9,15 @@
 #define HYPR(k1) &kp LC(LA(LG(LS(k1))))
 / {
     behaviors {
+        ht: hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <220>;
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <100>;
+            bindings = <&kp>, <&kp>;
+        };
         semicomma: comma_semi {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -47,12 +56,12 @@
             &qesc      &kp W      &kp E      &kp R      &kp T          &kp Y      &kp U      &kp I      &kp O      &kp BSPC
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │; "       │
-            &kp A      &kp S       &kp D    &mt LGUI F  &kp G          &kp H     &mt LGUI J  &kp  K     &kp  L     &kp SEMI
+            &kp A      &kp S       &kp D    &ht LGUI F  &kp G          &kp H     &ht LGUI J  &kp  K     &kp  L     &kp SEMI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , ;      │ . :      │ / ?      │
-          &mt LCTRL Z &mt LALT X  &kp C      &kp V      &kp B          &kp N      &kp M      &semicomma  &dotco    &kp FSLH
+          &ht LCTRL Z &ht LALT X  &kp C      &kp V      &kp B          &kp N      &kp M      &semicomma  &dotco    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                           &mt LGUI TAB &lt 1 SPACE   &lt 2 ENTER &sk RSHFT
+                                           &ht LGUI TAB &lt 1 SPACE   &lt 2 ENTER &sk RSHFT
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
