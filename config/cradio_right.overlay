@@ -1,0 +1,9 @@
+/ {
+    bvd: battery-voltage {
+        compatible = "zmk,battery-voltage-divider";
+        io-channels = <&adc 5>; /* nice!nano battery sense pin: P0.29 / AIN5 */
+        output-ohms = <470000>;
+        full-ohms = <1470000>; /* 1M + 470k divider on nice!nano */
+        label = "BATTERY_VOLTAGE";
+    };
+};
