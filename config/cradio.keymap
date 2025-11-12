@@ -7,6 +7,7 @@
 
 // Home row mods macro
 #define HYPR(k1) &kp LC(LA(LG(LS(k1))))
+#define HYPER LC(LA(LG(LSHFT)))
 / {
     behaviors {
         ht: hold_tap {
@@ -17,12 +18,6 @@
             quick-tap-ms = <150>;
             require-prior-idle-ms = <100>;
             bindings = <&kp>, <&kp>;
-        };
-        hyper: hyper_mod {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            mods = <(MOD_LCTL | MOD_LALT | MOD_LSFT | MOD_LGUI)>;
-            bindings = <&none>;
         };
         semicomma: comma_semi {
             compatible = "zmk,behavior-mod-morph";
@@ -67,7 +62,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , ;      │ . :      │ / ?      │
           &ht LCTRL Z &ht LALT X  &kp C      &kp V      &kp B          &kp N      &kp M      &semicomma  &dotco    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                           &ht &hyper TAB &lt 1 SPACE   &lt 2 ENTER &sk RSHFT
+                                           &ht HYPER TAB &lt 1 SPACE   &lt 2 ENTER &sk RSHFT
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
