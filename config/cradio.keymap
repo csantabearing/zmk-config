@@ -95,7 +95,7 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │          │          │          │          │   │          │          │          │          │          │
-           HYPR(Q)    HYPER(W)   HYPER(E)   HYPER(R)   HYPER(T)       &kp C_VOL_UP &kp RC(RS(TAB)) &kp C_BRI_UP &kp C_BRI_DN &kp RC(TAB)
+           HYPR(Q)    HYPR(W)    HYPR(E)    HYPR(R)    HYPR(T)       &kp C_VOL_UP &kp RC(RS(TAB)) &kp C_BRI_UP &kp C_BRI_DN &kp RC(TAB)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
            &kp LSHFT  HYPR(S)    HYPR(D)    HYPR(F)    HYPR(G)        &kp C_MUTE  &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT
