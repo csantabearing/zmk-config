@@ -18,6 +18,12 @@
             require-prior-idle-ms = <100>;
             bindings = <&kp>, <&kp>;
         };
+        caps: caps_word {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&sk RSHFT>, <&caps_word>;
+        };
         semicomma: comma_semi {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -61,7 +67,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , ;      │ . :      │ / ?      │
           &ht LCTRL Z &ht LALT X  &kp C      &kp V      &kp B          &kp N      &kp M      &semicomma  &dotco    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                           &ht HYPR TAB &lt 1 SPACE   &lt 2 ENTER &sk RSHFT
+                                           &ht LGUI TAB &lt 1 SPACE   &lt 2 ENTER &caps
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -78,7 +84,7 @@
         //│ <        │  >       │  [       │  ]       │   &      │   │ +        │ 1        │  2       │ 3        │  TILDE   │
             &kp LT     &kp GT     &kp LBKT   &kp RBKT   &kp AMPS       &kp PLUS   &kp N1     &kp N2     &kp N3    &kp TILDE
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &kp RG(RC(RS(N4))) &trans        &trans     &trans
+                                         &kp RG(RC(RS(N4))) &trans     &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
