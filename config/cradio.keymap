@@ -88,15 +88,15 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │          │          │          │          │   │          │          │          │          │          │
-        &kp C_VOL_DN &kp C_BRI_DN &kp C_BRI_UP &kp C_VOL_UP &kp C_MUTE &kp RG(RC(RS(N4))) &kp RC(RS(TAB)) &trans  &trans &kp RC(TAB)
+           &trans     &trans     &trans     &trans     &trans         &kp C_VOL_UP &kp RC(RS(TAB)) &kp RG(RC(RS(N4)))  &kp RG(RC(RS(N4))) &kp RC(TAB)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
-        &kp LSHFT    &trans      &trans     &trans     &trans         &trans      &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT
+        &kp LSHFT    &trans      &trans     &trans     &trans         &kp C_MUTE  &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
-           &trans     &trans     &trans     &trans     &trans         &kp RG(RC(Q)) &kp HOME &kp PG_DN  &kp PG_UP  &kp END
+           &trans     &trans     &trans     &trans     &trans         &kp C_VOL_DN &kp HOME &kp PG_DN  &kp PG_UP  &kp END
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans         &trans     &trans
+                                             &trans     &trans         &trans    &kp RG(RC(Q))
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
